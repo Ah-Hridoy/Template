@@ -34,12 +34,13 @@
   <template #item-action="item">
     {{ item.action }} 
    <div class="flex gap-2">
-    <div class=" text-xl cursor-pointer hover:text-green-700">
-     <i class="fa-solid fa-pen-to-square"></i>
-   </div>
-    <div class=" text-xl cursor-pointer hover:text-red-700">
-     <i class="fa-solid fa-trash"></i>
-    </div>
+      <div class=" text-xl cursor-pointer hover:text-green-700">
+        <i class="fa-solid fa-pen-to-square"></i>
+      </div>
+      
+      <div class=" text-xl cursor-pointer hover:text-red-700" @click="deleteItem(item)">
+        <i class="fa-solid fa-trash"></i>
+      </div>
     </div>
   </template>
   </EasyDataTable>
@@ -53,15 +54,6 @@ import { ref } from "vue";
 import Layout from "./Layout.vue";
 import EasyDataTable from "vue3-easy-data-table";
 import "vue3-easy-data-table/dist/style.css";
-
-
-
-const showPassword = ref(false);
-const togglePassword = () => {
-  showPassword.value = !showPassword.value;
-};
-
-
 
 /* Search variables (Kept for search input to work) */
 const searchField = ["player", "team", "number"];
@@ -88,6 +80,6 @@ const items = ref([
 ]);
 
 function deleteItem(item) {
-  alert(`Delete clicked for ${item.player}`);
+  alert(`Delete clicked for ${item.player}?`);
 }
 </script>
