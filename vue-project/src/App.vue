@@ -1,7 +1,7 @@
 <template>
   <Layout>
-    <!-- <Dashboard/>   -->
-    <Users/>
+    <Dashboard/>  
+    <!-- <Users/> -->
   </Layout>
 </template>
 
