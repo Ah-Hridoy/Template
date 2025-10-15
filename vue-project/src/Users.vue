@@ -19,9 +19,7 @@
       class="w-full mb-3 p-2 pl-10 border border-gray-300 rounded focus:outline-none focus:ring-0"
     />
   </div>
-   
-  <input type="text" placeholder="Search..." v-model="searchValue" class="mb-3 p-2 border border-gray-300 rounded focus:outline-none focus:ring-0" />
-      
+         
   <EasyDataTable
         show-index
         :items="items"
